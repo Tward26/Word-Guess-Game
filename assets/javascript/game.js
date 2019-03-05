@@ -15,11 +15,12 @@ var alphaExp = /^[a-zA-Z]+$/;
 //starting point variables
 var guessCount = 12;
 var winCount = 0;
-//variables to replace html spans
+//variables to replace html spans and h2
 var winsText = document.getElementById("wins-text");
 var currentWordText = document.getElementById("current-word");
 var guessesLeftText = document.getElementById("guesses-left");
 var lettersGuessedText = document.getElementById("letters-guessed");
+var hiddenText = document.getElementById("hidden");
 
 //Functions
 function resetGame() {
@@ -47,13 +48,9 @@ function randomNoRepeat(arr) {
         console.log("replaced array");
     }
     computerChoice = arr[Math.floor(Math.random() * arr.length)];
-    console.log(computerChoice);
     var index = arr.indexOf(computerChoice);
     arr.splice(index, 1);
-    console.log(arr);
     usedWords.push(computerChoice);
-    console.log(usedWords);
-
 }
 
 //initial page display info
@@ -91,6 +88,8 @@ document.onkeyup = function (event) {
         if (computerChoice === correctString) {
             winCount++;
             winsText.textContent = winCount;
+            document.getElementById("hidden").style.display = "block";
+            hiddenText.textContent = "Fire on the Mountain";
             resetGame();
         }
         //checks loss condition

@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Grateful Dead Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
 </head>
+
 <body>
-    <div class="flex-container">
-        <img src="assets/images/logo.png" alt="Grateful Dead logo">
-        <h1>Grateful Dead Hangman!</h1>
-    </div>
-    <div class="flex-container">
-        <div id="left-col">
-                <iframe width="500" height="300" src="https://www.youtube.com/embed/3I7CLy70WtI?rel=0;&autoplay=1&mute=1" frameborder="0" include></iframe>       
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="img-fluid" src="assets/images/logo.png" alt="Grateful Dead logo">
+                <h1>Grateful Dead Hangman!</h1>
             </div>
-        <div id="right-col">
-            <p>PRESS ANY KEY TO GET STARTED</p>
-            <p>WINS: <span id="wins-text"></span></p>
-            <p>CURRENT WORD: <br><span id="current-word"></span></p>
-            <p>NUMBER OF GUESSES REMAINING:<br><span id="guesses-left"></span></p>
-            <p>LETTERS ALREADY GUESSED:<br><span id="letters-guessed"></span></p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 id="hidden">Terrapin Station</h2>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-6 col-sm-12 embed-responsive embed-responsive-16by9 mt-4 customBorder">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3I7CLy70WtI?rel=0;&autoplay=1&mute=1"></iframe>
+            </div>
+            <div class="col-md-6 col-sm-12 mt-4 customBorder">
+                <p class="mt-2">PRESS ANY KEY TO GET STARTED</p>
+                <p>WINS: <span id="wins-text"></span></p>
+                <p>CURRENT WORD: <br><span id="current-word"></span></p>
+                <p>NUMBER OF GUESSES REMAINING:<br><span id="guesses-left"></span></p>
+                <p>LETTERS ALREADY GUESSED:<br><span id="letters-guessed"></span></p>
+            </div>
         </div>
     </div>
     <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
