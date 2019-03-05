@@ -1,9 +1,10 @@
 //Variable declaration and assignment
 
 //variable for possible word choices for game
-var wordChoiceList = ["TEST", "CENTER", "WORKING", "LAVA", "ASSEMBLAGE", "OHGODWHY"]
+var wordChoiceList = ["TERRAPIN", "SUGAREE", "WHARFRAT", "PROPHET", "TRUCKIN", "MUSIC", "DEVIL", "STRANGER", "FRANCE", "MOUNTAIN", "SHAKEDOWN"];
+var usedWords = [];
 //variable for randomly selected word
-var computerChoice = wordChoiceList[Math.floor(Math.random() * wordChoiceList.length)];
+var computerChoice;
 //variables to hold player letter guesses
 var rightGuess = [];
 var correctString = "";
@@ -22,7 +23,7 @@ var lettersGuessedText = document.getElementById("letters-guessed");
 
 //Functions
 function resetGame() {
-    computerChoice = wordChoiceList[Math.floor(Math.random() * wordChoiceList.length)];
+    randomNoRepeat(wordChoiceList);
     resetCurrentWord();
     currentWordText.textContent = correctString;
     wrongGuesses = [];
@@ -39,8 +40,25 @@ function resetCurrentWord() {
     }
 }
 
+function randomNoRepeat(arr) {
+    if (arr.length === 0) {
+        arr.splice(0, arr.length, ...usedWords);
+        usedWords = [];
+        console.log("replaced array");
+    }
+    computerChoice = arr[Math.floor(Math.random() * arr.length)];
+    console.log(computerChoice);
+    var index = arr.indexOf(computerChoice);
+    arr.splice(index, 1);
+    console.log(arr);
+    usedWords.push(computerChoice);
+    console.log(usedWords);
+
+}
+
 //initial page display info
 guessesLeftText.textContent = guessCount;
+randomNoRepeat(wordChoiceList);
 resetCurrentWord();
 currentWordText.textContent = correctString;
 
@@ -51,7 +69,7 @@ document.onkeyup = function (event) {
     userGuess = event.key.toUpperCase();
 
     //checks to make sure key pressed was a letter
-    if(userGuess.match(alphaExp)) {
+    if (userGuess.match(alphaExp)) {
         //if correct letter guessed find all instances of it and replace - with letter
         if (computerChoice.indexOf(userGuess) !== -1) {
             for (var j = 0; j < computerChoice.length; j++) {
