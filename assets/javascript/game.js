@@ -2,17 +2,17 @@
 
 //Array of objects and using object constructor and push to add them to Array
 var objectList = [];
-objectList.push(objConstructor("TERRAPIN","Terrapin Station","https://www.youtube.com/embed/3I7CLy70WtI?rel=0;&autoplay=1"));
-objectList.push(objConstructor("SUGAREE","Sugaree","https://www.youtube.com/embed/Ld4wCgARzv0?rel=0;&autoplay=1"));
-objectList.push(objConstructor("WHARF","Wharf Rat","https://www.youtube.com/embed/L3cXWl8AHUM?rel=0;&autoplay=1"));
-objectList.push(objConstructor("PROPHET","Estimated Prophet","https://www.youtube.com/embed/CR5iB3ITGIU?rel=0;&autoplay=1"));
-objectList.push(objConstructor("TRUCKIN","Truckin'","https://www.youtube.com/embed/SlwMmfLIkVE?rel=0;&autoplay=1"));
-objectList.push(objConstructor("MUSIC","Music Never Stopped","https://www.youtube.com/embed/uRiCsw6qXNc?rel=0;&autoplay=1"));
-objectList.push(objConstructor("DEVIL","Friend of the Devil","https://www.youtube.com/embed/UkjgYxs3gkw?rel=0;&autoplay=1"));
-objectList.push(objConstructor("STRANGER","Feel Like a Stranger","https://www.youtube.com/embed/Cvi8P-pMHuA?rel=0;&autoplay=1"));
-objectList.push(objConstructor("FRANCE","France","https://www.youtube.com/embed/yl-qNKQWK34?rel=0;&autoplay=1"));
-objectList.push(objConstructor("MOUNTAIN","Fire on the Mountain","https://www.youtube.com/embed/0KJKiCGjHZk?rel=0;&autoplay=1"));
-objectList.push(objConstructor("SHAKEDOWN","Shakedown Street","https://www.youtube.com/embed/6jmnASVqZMU?rel=0;&autoplay=1"));
+objectList.push(objConstructor("TERRAPIN", "Terrapin Station", "https://www.youtube.com/embed/3I7CLy70WtI?rel=0;&autoplay=1"));
+objectList.push(objConstructor("SUGAREE", "Sugaree", "https://www.youtube.com/embed/Ld4wCgARzv0?rel=0;&autoplay=1"));
+objectList.push(objConstructor("WHARF", "Wharf Rat", "https://www.youtube.com/embed/L3cXWl8AHUM?rel=0;&autoplay=1"));
+objectList.push(objConstructor("PROPHET", "Estimated Prophet", "https://www.youtube.com/embed/CR5iB3ITGIU?rel=0;&autoplay=1"));
+objectList.push(objConstructor("TRUCKIN", "Truckin'", "https://www.youtube.com/embed/SlwMmfLIkVE?rel=0;&autoplay=1"));
+objectList.push(objConstructor("MUSIC", "Music Never Stopped", "https://www.youtube.com/embed/uRiCsw6qXNc?rel=0;&autoplay=1"));
+objectList.push(objConstructor("DEVIL", "Friend of the Devil", "https://www.youtube.com/embed/UkjgYxs3gkw?rel=0;&autoplay=1"));
+objectList.push(objConstructor("STRANGER", "Feel Like a Stranger", "https://www.youtube.com/embed/Cvi8P-pMHuA?rel=0;&autoplay=1"));
+objectList.push(objConstructor("FRANCE", "France", "https://www.youtube.com/embed/yl-qNKQWK34?rel=0;&autoplay=1"));
+objectList.push(objConstructor("MOUNTAIN", "Fire on the Mountain", "https://www.youtube.com/embed/0KJKiCGjHZk?rel=0;&autoplay=1"));
+objectList.push(objConstructor("SHAKEDOWN", "Shakedown Street", "https://www.youtube.com/embed/6jmnASVqZMU?rel=0;&autoplay=1"));
 
 //variable to hold words that have already been used
 var usedWords = [];
@@ -20,7 +20,7 @@ var usedWords = [];
 var computerChoice;
 var computerWord;
 //variables to hold player letter guesses, right, wrong, and verify alpha chars only
-var rightGuess = [];
+var rightGuesses = [];
 var correctString = "";
 var userGuess;
 var wrongGuesses = [];
