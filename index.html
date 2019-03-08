@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro" rel="stylesheet">
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Permanent+Marker|Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
 </head>
 
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <img class="img-fluid" src="assets/images/logo.png" alt="Grateful Dead logo">
+                <img class="img-fluid" id="logo" src="assets/images/logo.png" alt="Grateful Dead logo">
                 <h1>Grateful Dead Hangman!</h1>
             </div>
         </div>
@@ -27,10 +27,12 @@
         </div>
         <div class="row mb-4">
             <div class="col-md-6 col-sm-12 embed-responsive embed-responsive-16by9 mt-4 customBorder">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3I7CLy70WtI?rel=0;&autoplay=1&mute=1"></iframe>
+                <img class="img-fluid embed-responsive-item" src="assets/images/band.png" id="bandPic"
+                    alt="Grateful Dead band members">
+                <iframe class="embed-responsive-item" id="music" src="" allow="autoplay"></iframe>
             </div>
             <div class="col-md-6 col-sm-12 mt-4 customBorder">
-                <p class="mt-2">PRESS ANY KEY TO GET STARTED</p>
+                <p class="mt-2">PRESS ANY LETTER KEY TO GET STARTED</p>
                 <p>WINS: <span id="wins-text"></span></p>
                 <p>CURRENT WORD: <br><span id="current-word"></span></p>
                 <p>NUMBER OF GUESSES REMAINING:<br><span id="guesses-left"></span></p>

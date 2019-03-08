@@ -1,29 +1,26 @@
 h1{
     font-size: 3em;
     color: #f6bf0e;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: bold;
+    font-family: "Permanent Marker", cursive;
     display: inline-block;
     text-align: center;
 }
 
+/*H2 is initially not displayed and revealed on correct word guess matching the song title */
 h2#hidden{
-        font-size: 2em;
-        color:#e04c5e;
-        font-family: 'Playfair Display', serif;
-        font-style: italic;
-        font-weight: bold;
-        display: none;
-        text-align: center;
+    font-size: 2.5em;
+    color:#e04c5e;
+    font-family: "Permanent Marker", cursive;
+    display: none;
+    text-align: center;
 }
 
-img{
+#logo{
     max-height: 500px;
 }
 
 body{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 1em;
     text-align: center;
     color: #f6bf0e;
@@ -33,4 +30,9 @@ body{
 .customBorder{
     border-style: dashed;
     border-color: #f6bf0e;
+}
+
+/*The iframe is initialy not displayed and the band image is in its place */
+#music{
+    display: none;
 }
