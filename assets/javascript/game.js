@@ -101,7 +101,6 @@ document.onkeyup = function (event) {
     // Determines which key was pressed.
     userGuess = event.key.toUpperCase();
     guessVerify = event.keyCode
-    console.log(event);
 
     //checks to make sure key pressed was a alpha
     if (guessVerify > 64 && guessVerify < 91) {

@@ -2,6 +2,9 @@
 
 *Hangman type game created for bootcamp coursework*
 
+## Link to deployed project:
+https://tward26.github.io/Word-Guess-Game/
+
 ## Purpose:
 The purpose of this basic game was to practice my javascript skills while also providing a fun way of exposing the end user to the music of
 the Grateful Dead.
